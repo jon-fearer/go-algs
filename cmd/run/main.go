@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/jon-fearer/go-algs/internal/binarysearch"
+	"github.com/jon-fearer/go-algs/internal"
 )
 
 func main() {
-	binarysearch.BinarySearch()
+	internal.BinarySearch()
 }
