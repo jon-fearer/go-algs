@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	internal.BinarySearch()
+	internal.BinarySearch(17)
 }
