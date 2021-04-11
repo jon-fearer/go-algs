@@ -6,4 +6,5 @@ import (
 
 func main() {
 	internal.BinarySearch(17)
+	internal.StringReversal()
 }
