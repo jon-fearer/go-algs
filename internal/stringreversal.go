@@ -11,12 +11,13 @@ func StringReversal() {
 	}
 	fmt.Println(output)
 	// For loop with character index reversal
-	output2 := []rune(input)
+	input2 := "elpoep"
+	output2 := []rune(input2)
 	start := 0
-	end := len(input) - 1
+	end := len(input2) - 1
 	for start < end {
-		output2[start] = rune(input[end])
-		output2[end] = rune(input[start])
+		output2[start] = rune(input2[end])
+		output2[end] = rune(input2[start])
 		start += 1
 		end -= 1
 	}
