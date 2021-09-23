@@ -1,3 +1,3 @@
 module github.com/jon-fearer/go-algs
 
-go 1.14
+go 1.16
