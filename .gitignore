@@ -17,3 +17,4 @@
 .idea
 pkg/mod/cache/lock
 main
+.DS_Store
