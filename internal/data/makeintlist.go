@@ -1,9 +1,9 @@
 package data
 
-func MakeIntList(dat []interface{}) []int {
-	intList := make([]int, len(dat))
-	for i := range dat {
-		intList[i] = int(dat[i].(float64))
+func MakeIntList(data []interface{}) []int {
+	intList := make([]int, len(data))
+	for i := range data {
+		intList[i] = int(data[i].(float64))
 	}
 	return intList
 }

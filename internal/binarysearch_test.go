@@ -12,11 +12,15 @@ func TestBinarySearch(t *testing.T) {
 	}
 	sortedArray := data.MakeIntList(parsed.([]interface{}))
 	searchVal := 7
+	expectedIndex := 6
 	result, err := BinarySearch(sortedArray, searchVal)
 	if err != nil {
 		t.Errorf("Binary search error: %s", err.Error())
 	}
-	if result != searchVal {
+	if result.resultValue != searchVal {
 		t.Errorf("Binary search failed to locate search value. Expected: %d, Actual: %d", searchVal, result)
+	}
+	if result.resultIndex != expectedIndex {
+		t.Errorf("Binary search failed to locate search value index. Expected: #{expectedIndex}, Actual: #{result.resultIndex}")
 	}
 }

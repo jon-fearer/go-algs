@@ -4,10 +4,16 @@ import (
 	"math"
 )
 
-func BinarySearch(sortedArray []int, searchVal int) (int, error) {
+type BinarySearchResult struct {
+	resultValue int
+	resultIndex int
+}
+
+func BinarySearch(sortedArray []int, searchVal int) (BinarySearchResult, error) {
 	left := 0
 	right := len(sortedArray) - 1
-	result := 0
+	resultValue := 0
+	resultIndex := 0
 	for left <= right {
 		middle := math.Floor((float64(left) + float64(right)) / 2)
 		if sortedArray[int(middle)] < searchVal {
@@ -15,9 +21,10 @@ func BinarySearch(sortedArray []int, searchVal int) (int, error) {
 		} else if sortedArray[int(middle)] > searchVal {
 			right = int(middle) - 1
 		} else {
-			result = sortedArray[int(middle)]
+			resultIndex = int(middle)
+			resultValue = sortedArray[int(middle)]
 			break
 		}
 	}
-	return result, nil
+	return BinarySearchResult{resultValue, resultIndex}, nil
 }

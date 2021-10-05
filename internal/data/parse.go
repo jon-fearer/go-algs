@@ -13,12 +13,12 @@ func ParseData(filename string) (interface{}, error) {
 		return nil, err
 	}
 	filepath := path.Join(workingDir, "data", filename)
-	dat, err := ioutil.ReadFile(filepath)
+	data, err := ioutil.ReadFile(filepath)
 	if err != nil {
 		return nil, err
 	}
 	var parsed interface{}
-	err = json.Unmarshal(dat, &parsed)
+	err = json.Unmarshal(data, &parsed)
 	if err != nil {
 		return nil, err
 	}
