@@ -7,7 +7,11 @@ func TestStringReversalSimple(t *testing.T) {
 	expected := "hello"
 	result := StringReversalSimple(input)
 	if result != expected {
-		t.Fatalf("StringReversalSimple failed to reverse string. Expected: #{expected}, Actual: #{result}")
+		t.Fatalf(
+			"StringReversalSimple failed to reverse string. Expected: %s, Actual: %s",
+			expected,
+			result,
+		)
 	}
 }
 
@@ -16,6 +20,10 @@ func TestStringReversalIndexReversal(t *testing.T) {
 	expected := "people"
 	result := StringReversalIndexReversal(input)
 	if result != expected {
-		t.Fatalf("StringReversalSimple failed to reverse string. Expected: #{expected}, Actual: #{result}")
+		t.Fatalf(
+			"StringReversalSimple failed to reverse string. Expected: %s, Actual: %s",
+			expected,
+			result,
+		)
 	}
 }

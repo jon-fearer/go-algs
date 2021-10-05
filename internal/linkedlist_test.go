@@ -18,6 +18,6 @@ func TestIterateLinkedList(t *testing.T) {
 		t.Fatalf("Unable to iterate linked list. Error: %s", err.Error())
 	}
 	if reflect.DeepEqual(actualList, expectedList) == false {
-		t.Errorf("Lists do not match. Expected: #{expectedList}, Actual: #{actualList}")
+		t.Errorf("Lists do not match. Expected: %v, Actual: %v", expectedList, actualList)
 	}
 }

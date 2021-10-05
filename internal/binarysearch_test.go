@@ -18,9 +18,17 @@ func TestBinarySearch(t *testing.T) {
 		t.Errorf("Binary search error: %s", err.Error())
 	}
 	if result.resultValue != searchVal {
-		t.Errorf("Binary search failed to locate search value. Expected: %d, Actual: %d", searchVal, result)
+		t.Errorf(
+			"Binary search failed to locate search value. Expected: %d, Actual: %d",
+			searchVal,
+			result,
+		)
 	}
 	if result.resultIndex != expectedIndex {
-		t.Errorf("Binary search failed to locate search value index. Expected: #{expectedIndex}, Actual: #{result.resultIndex}")
+		t.Errorf(
+			"Binary search failed to locate search value index. Expected: %d, Actual: %d",
+			expectedIndex,
+			result.resultIndex,
+		)
 	}
 }
