@@ -49,12 +49,24 @@ func (h *HashTable) Get(key string) (int, error) {
 	}
 	kvLinkedList := h.data[index]
 	var value int
-	for i := 0; i < len(kvLinkedList); i++ {
-		currentKv := kvLinkedList[i].data
-		if currentKv.key == key {
-			value = currentKv.value
+	if kvLinkedList != nil {
+		value, err = searchLinkedList(kvLinkedList, key)
+		if err != nil {
+			return 0, err
+		}
+	}
+	return value, nil
+}
+
+func searchLinkedList(linkedList []*KeyValueNode, key string) (int, error) {
+	currentNode := linkedList[0]
+	var value int
+	for currentNode != nil {
+		if currentNode.data.key == key {
+			value = currentNode.data.value
 			break
 		}
+		currentNode = currentNode.next
 	}
 	return value, nil
 }
