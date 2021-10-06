@@ -38,7 +38,7 @@ type HashTable struct {
 	data [100][]*KeyValueNode
 }
 
-func NewHashTable() *HashTable {
+func NewHashTable() IHashTable {
 	return &HashTable{}
 }
 
