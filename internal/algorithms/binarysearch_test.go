@@ -1,4 +1,4 @@
-package internal
+package algorithms
 
 import (
 	"github.com/jon-fearer/go-algs/internal/data"

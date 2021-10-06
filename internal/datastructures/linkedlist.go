@@ -1,4 +1,4 @@
-package internal
+package datastructures
 
 type Node struct {
 	data int

@@ -12,7 +12,7 @@ func ParseData(filename string) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
-	filepath := path.Join(workingDir, "data", filename)
+	filepath := path.Join(workingDir, "..", "data", filename)
 	data, err := ioutil.ReadFile(filepath)
 	if err != nil {
 		return nil, err

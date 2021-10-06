@@ -1,4 +1,4 @@
-package internal
+package algorithms
 
 // StringReversalSimple uses a for loop to reverse the string
 func StringReversalSimple(input string) string {
