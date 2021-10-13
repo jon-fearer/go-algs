@@ -18,8 +18,8 @@ func StringReversalIndexReversal(input string) string {
 	for start < end {
 		output[start] = rune(input[end])
 		output[end] = rune(input[start])
-		start += 1
-		end -= 1
+		start++
+		end--
 	}
 	return string(output)
 }
