@@ -10,7 +10,7 @@ func MergeSort(data []int) ([]int, error) {
 
 func mergeSortSubset(data *[]int, work *[]int, left int, right int) {
 	if left < right {
-		middle := left + ((right - left) / 2)
+		middle := (left + right) / 2
 		mergeSortSubset(data, work, left, middle)
 		mergeSortSubset(data, work, middle + 1, right)
 		merge(data, work, left, middle, right)
