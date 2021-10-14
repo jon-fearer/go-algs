@@ -6,13 +6,11 @@ func QuickSort(data []int) []int {
 
 func quickSortSubset(data []int, left int, right int) []int {
 	j := partition(data, left, right)
-	k := j - 1
-	l := j + 1
-	if left < k {
-		quickSortSubset(data, left, k)
+	if left < j - 1 {
+		quickSortSubset(data, left, j - 1)
 	}
-	if l < right {
-		quickSortSubset(data, l, right)
+	if j + 1 < right {
+		quickSortSubset(data, j + 1, right)
 	}
 	return data
 }
