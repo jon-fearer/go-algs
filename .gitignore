@@ -18,3 +18,4 @@
 pkg/mod/cache/lock
 main
 .DS_Store
+internal/questions
